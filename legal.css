@@ -1,0 +1,46 @@
+:root {
+  color-scheme: light;
+  font: 100%/1.65 system-ui, sans-serif;
+  --ink: #191729;
+  --muted: #514d65;
+  --accent: #4830c7;
+  --line: #e7e4ef;
+  --notice: #f4f0ff;
+  color: var(--ink);
+  background: #fff;
+}
+body { margin: 0; }
+main { max-width: 46rem; margin-inline: auto; padding: 1.5rem 1.25rem 3rem; }
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 2rem; margin: .75rem 0 .5rem; }
+h2 { font-size: 1.25rem; margin: 0 0 .75rem; }
+h3 { font-size: 1rem; margin: 1rem 0 .25rem; }
+p { margin: 0 0 .75rem; }
+ul, ol { padding-inline-start: 1.35rem; }
+li + li { margin-block-start: .25rem; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: .25rem; }
+.page-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; }
+.brand { display: inline-flex; align-items: center; gap: .5rem; color: var(--ink); font-weight: 700; text-decoration: none; }
+.brand::before { content: ""; width: 2rem; height: 2rem; flex: none; border-radius: .5rem; background: url("icons/Icon-192.png") center / contain no-repeat; }
+.languages { display: flex; flex-wrap: wrap; gap: 0 .75rem; align-items: center; }
+.languages a { padding-block: .5rem; }
+.languages [aria-current] { font-weight: 700; }
+main { overflow-wrap: anywhere; }
+.summary { color: var(--muted); }
+.draft { padding: .75rem 1rem; border-radius: .5rem; background: var(--notice); }
+.index, section, .related { border-block-start: 1px solid var(--line); margin-block-start: 1.5rem; padding-block-start: 1.5rem; }
+.index p { font-weight: 700; }
+.index ul { margin-block: 0; }
+.related { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+.data-list { margin: 0; }
+.data-list div { padding-block: .75rem; border-block-end: 1px solid var(--line); }
+.data-list dt { font-weight: 700; }
+.data-list dd { margin: .25rem 0 0; color: var(--muted); }
+@media (min-width: 40rem) {
+  main { padding: 2.25rem 2rem 4rem; }
+  .index ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .25rem 1rem; }
+  .index li + li { margin: 0; }
+  .data-list div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 1rem; }
+  .data-list dd { margin: 0; }
+}
